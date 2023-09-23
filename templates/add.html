@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reg.css">
+    <title>Registration</title>
+</head>
+<body>
+   <div class ="background-image "></div>
+    <div class="container">
+        <a href="home"><img src="https://cdn-icons-png.flaticon.com/128/25/25694.png" alt="home" width="20px" height="20px"></a>
+        <form class="form" action="{{ url_for('add') }}" method="post">
+            <h2>Add balance</h2>
+            <input type="text" name="c_name"  value="{{cname}}"required>
+
+            <input type="number" name="balance" placeholder="Enter  amount" required>
+            <button type="submit">Add Amount</button>
+        </form>
+        <p>{{msg}}</p>
+    </div>
+</body>
+</html>
